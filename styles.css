@@ -73,6 +73,12 @@ a:hover .fas {
   font-size: 17px;
 }
 
+.bibtex_template .year {
+  font-size: 1em !important; /* Match normal text size */
+  /* font-weight: normal !important; */  /* Remove bold */
+}
+
+
 .bibtex_template .title {
   font-weight: bold;
 }
