@@ -1,27 +1,23 @@
-/* Basic Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* Custom CSS - Bootstrap-compatible version */
+/* Removed conflicting/reset styles that Bootstrap already handles */
 
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
-  background-color: #f4f4f4;
   color: #333;
 }
 
 header {
   background-color: #333;
   color: white;
-  padding: 10px 0;
 }
 
 header nav ul {
   display: flex;
   justify-content: center;
   list-style: none;
+  padding-left: 0; /* Bootstrap adds padding by default */
+  margin-bottom: 0; /* Bootstrap adds margin by default */
 }
 
 header nav ul li {
@@ -32,56 +28,17 @@ header nav ul li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
-  font-size: 18px;
 }
 
 header nav ul li a:hover {
   color: #f39c12;
 }
 
-main {
-  padding: 20px;
-}
-
 section {
   margin: 20px 0;
 }
 
-h1, h2 {
-  color: #333;
-}
-
-ul {
-  list-style-type: none;
-}
-
-ul li {
-  margin: 10px 0;
-}
-
-ul li a {
-  color: #333;
-  text-decoration: none;
-}
-
-ul li a:hover {
-  color: #f39c12;
-}
-
-footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 10px 0;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-}
-
-footer p {
-  margin: 0;
-}
-
+/* Custom link styles that override Bootstrap */
 .resume-link {
   text-decoration: underline;
   color: #1a73e8;
@@ -90,14 +47,41 @@ footer p {
 
 .resume-link:hover {
   color: #0049a8;
+  text-decoration: underline;
 }
 
-html,body,span,h1 {
-    font-family: "Times New Roman", Times, serif;
-    font-size: 17px;
+/* Publication-specific styles */
+.bibtex_template {
+  margin: 1em 0;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 17px;
 }
-bibtex { display: none; }
-.searchbar { margin-left:0px;}
-#bibtex_errors { margin-top:10px; color: red;}
-h1.header {margin-left:8px;}
-h1.YEAR { font-size: 17px; font-weight: bold; display: inline; margin-left:8px;}
+
+.bibtex_template .title {
+  font-weight: bold;
+}
+
+.bibtex_template .journal {
+  font-style: italic;
+}
+
+#bibtex_errors {
+  margin-top: 10px;
+  color: red;
+}
+
+/* Fix footer positioning with Bootstrap */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  position: static; /* Changed from fixed to avoid Bootstrap conflicts */
+  width: 100%;
+}
+
+/* Custom typography override */
+.custom-typography {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 17px;
+}
