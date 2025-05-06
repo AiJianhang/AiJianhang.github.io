@@ -17,6 +17,13 @@
   <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/pcooksey/bibtex-js@1.0.0/src/bibtex_js.js"></script>
 </head>
 <body>
+  <div class="bibtex_template">
+    <div class="if author"><span class="author"></span>. </div>
+    <div class="if title"><span class="title"></span>. </div>
+    <div class="if journal"><em><span class="journal"></span></em>, </div>
+    <div class="if year"><span class="year"></span>.</div>
+    <br>
+  </div>
 <img src="me.jpg" alt="Photo of Me" width="150" style="position: absolute; top: 100px; right: 100px; border-radius: 20px;">
   <!-- Header Section -->
   <header>
@@ -63,10 +70,6 @@
   <footer>
     <p>&copy; 2025 Ai Jianhang. All rights reserved.</p>
   </footer>
-  <script>
-    window.onload = function () {
-      bibtexify('publications.bib', 'bibtex_display');
-    };
-  </script>
+  <script type="text/javascript" src="publications.bib"></script>
 </body>
 </html>
