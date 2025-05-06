@@ -67,15 +67,17 @@ a:hover .fas {
 }
 
 /* Publications Section */
-.bibtex_template {
-  margin: 1em 0;
-  font-family: "Times New Roman", Times, serif;
-  font-size: 17px;
-}
+
 
 .bibtex_template .year {
   font-size: medium !important; /* Match normal text size */
   /* font-weight: normal !important; */  /* Remove bold */
+}
+
+.bibtex_template {
+  margin: 1em 0;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 17px;
 }
 
 
