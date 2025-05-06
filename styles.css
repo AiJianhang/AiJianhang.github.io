@@ -1,12 +1,14 @@
-/* Custom CSS - Bootstrap-compatible version */
-/* Removed conflicting/reset styles that Bootstrap already handles */
+/* Custom CSS with Bootstrap compatibility + icon styles */
+/* ==================================================== */
 
+/* Body & Text Styling */
 body {
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
   color: #333;
 }
 
+/* Header/Navigation */
 header {
   background-color: #333;
   color: white;
@@ -16,8 +18,8 @@ header nav ul {
   display: flex;
   justify-content: center;
   list-style: none;
-  padding-left: 0; /* Bootstrap adds padding by default */
-  margin-bottom: 0; /* Bootstrap adds margin by default */
+  padding-left: 0;
+  margin-bottom: 0;
 }
 
 header nav ul li {
@@ -34,11 +36,26 @@ header nav ul li a:hover {
   color: #f39c12;
 }
 
-section {
-  margin: 20px 0;
+/* Icon Styling (Restored!) */
+.fab, .fas {
+  margin-right: 8px;
+  width: 20px;
+  text-align: center;
+  color: #555; /* Default icon color */
 }
 
-/* Custom link styles that override Bootstrap */
+.fa-github { color: #333; }
+.fa-linkedin { color: #0a66c2; }
+.fa-graduation-cap { color: #4285f4; } /* Google Scholar blue */
+.fa-envelope { color: #d44638; } /* Gmail red */
+
+/* Link Hover Effects */
+a:hover .fab,
+a:hover .fas {
+  opacity: 0.8;
+}
+
+/* Resume Link */
 .resume-link {
   text-decoration: underline;
   color: #1a73e8;
@@ -47,10 +64,9 @@ section {
 
 .resume-link:hover {
   color: #0049a8;
-  text-decoration: underline;
 }
 
-/* Publication-specific styles */
+/* Publications Section */
 .bibtex_template {
   margin: 1em 0;
   font-family: "Times New Roman", Times, serif;
@@ -70,18 +86,12 @@ section {
   color: red;
 }
 
-/* Fix footer positioning with Bootstrap */
+/* Footer */
 footer {
   background-color: #333;
   color: white;
   text-align: center;
   padding: 10px 0;
-  position: static; /* Changed from fixed to avoid Bootstrap conflicts */
+  position: static;
   width: 100%;
-}
-
-/* Custom typography override */
-.custom-typography {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 17px;
 }
