@@ -81,3 +81,13 @@ footer {
 footer p {
   margin: 0;
 }
+
+.resume-link {
+  text-decoration: underline;
+  color: #1a73e8;
+  font-weight: bold;
+}
+
+.resume-link:hover {
+  color: #0049a8;
+}
